@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- the basic structure-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> <!-- from font awesome cdnjs I copy  the link to use the icones  -->
+  <link rel="stylesheet" href="css/style.css"> <!--  to know css and to contact with CSS -->
+   <title>E LEARN </title>
+   
+   <style>
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+    /* I copied this link from poppins fonts website to style the font */
+
+     * {    /* to style all of the elements */
+
+    font-family: 'Poppins', sans-serif; /* from popies font */
+    margin:0;
+    padding:0;
+    box-sizing:border-box; /* to calculate the padding and border with width and hiegh */
+    scroll-behavior:smooth;
+
+     }
+
+
+    /* Section the header */
+
+header{
+    background-color:  #bbdefb;
+    width:100%;
+    position:fixed; /* the header is fixed */
+    z-index:999; /* when navigation the sit the header is fixed and clear */
+    display:flex;
+    justify-content:space-between; /* space between logo and nav */
+    align-items:center; 
+    padding:10px 200px ;
+
+}
+
+.logo {
+    text-decoration: none; 
+    color: #1c1c1c;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navigation a { /* to edit the links of a property  inside navigation property */
+    text-decoration: none;
+    color: #1c1c1c;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+
+.navigation a:hover {
+    color: rgb(253, 68, 90);
+
+}
+
+
+/* Section the main */
+
+section {    /* it applies to all sections */
+
+padding: 100px 200px;
+
+}
+
+
+.main {
+width: 100;
+min-height: 100vh;
+display: flex;
+align-items: center;
+background: url(images/back0.png) no-repeat ;
+background-size: cover;
+background-position: center ;
+background-attachment: fixed;
+
+
+}
+
+.main h2{
+  
+    color: rgb(253, 68, 90);
+    font-size: 1.4em;
+    font-weight: 400;
+
+}
+
+
+.main h4 {
+    color: rgb(91, 89, 89) ;
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 0px;
+    margin-top: 1px;
+    margin-bottom: 20px;
+}
+
+.main-btn {
+    color: antiquewhite;
+    background-color: #312ba6;;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.75 ease;
+}
+
+.main-btn:hover {
+    background-color:  #3a23ca;
+    transform: scale(1.1);
+}
+
+.social-icons a {
+    color: black ;
+    font-size: 1.7em;
+    padding-right: 30px;
+}
+
+/* Section about */
+
+.cards {
+  background-color: #f5f5f5 ;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: rgb(253, 68, 90);
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row ;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: rgb(253, 251, 251);
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+
+
+.card:hover{
+    transform:scale(1.1);
+}
+
+.icon {
+  color: #111213;
+  font-size: 5em;
+  text-align: center;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3 {
+    color: #348e74;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+/* Section Projects */
+
+.projects {   /* background for the section */
+
+  background-color: #bbdefb;
+}
+
+.projects .content {   /* To create space between the cards and the tittle */
+  margin-top: 30px;
+}
+
+.project-card {
+  background-color: #d6d6dc;
+  border: 1px solid white;
+  min-height: 14em;
+  width: 19em;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px;
+  transition: 0.7s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.1);
+}
+
+.project-card:hover .project-image {
+  opacity: 0.9;
+}
+
+.project-image img {
+  width : 100%
+}
+
+.project-info {
+  padding: 1em;
+
+}
+.project-category {
+  font-size: 0.8em ;
+  color: #1c1c1c;
+}
+
+.project-title {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-top: 20px;
+}
+.more-details {
+  text-decoration: none;
+  color: #312ba6;
+
+}
+
+.more-details:hover {
+  color: #312ba6;
+}
+
+/* section contact */
+
+.contact .icon{
+  font-size: 4em;
+}
+
+.contact .info h3 {
+  color: #1c1c1c;
+
+}
+
+.contact .info p {
+  font-size: 1em;
+}
+
+
+/* section footer */
+
+.footer {
+  background-color:  #bbdefb;
+  color: black;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-title {
+  font-size: 1em;
+  font-weight: 600;
+
+}
+
+.footer-title span {
+  color:rgb(253, 68, 90);
+}
+
+.footer .social-icons a {
+  font: size 1.3em; 
+  padding: 0 12px 0 0;
+}
+
+/* for IPone we need to write this code */
+@media (max-width:1023px){
+  header {
+    padding: 12px 20px;
+  }
+  .navigation a {
+    padding-left: 10px;
+  }
+  .title {
+    font-size: 1.8em;
+
+  }
+  section {
+    padding: 80px 20px;
+  }
+.main-content h2 {
+  font-size: 1em;
+}
+ .main-content h3 {
+   font-size: 1.6em;
+ }
+
+ .content {
+   flex-direction: column;
+   align-items: center;
+ }
+
+ @media (max: width 641px;) {
+   body{
+     font-size: 12px;
+   }
+
+   .main-content h2{
+     font-size: 0.8em;
+   }
+
+   .main-content h3{
+     font-size: 1.4em;
+
+   }
+ }
+
+ @media max: width 300px;){
+
+ 
+   body{
+     font-size: 10px;
+   }
+ }
+}
+
+
+   </style>
+</head>
+
+
+
+
+
+
+<body>
+  <!-- Section the  header -->
+
+  <header>
+    <a href="#" class="logo" >E-LEARN</a>
+    <nav class="navigation"> <!--  to add links -->
+      <a href="#about">about</a>
+      <a href="#Projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Section the main -->
+
+  <section class="main">
+  <div>
+    <h2>WELCOME</h2>
+    <h4>Learn English to Use it!
+      You will become an expert English speaker!</h4>
+      <h4>Many people study English for many years. Even after years of studying,</h4>
+      <h4>they go to an English speaking country and realize that they cannot say one sentence</h4> <h4>correctly
+      This is going to change for people who finish this course. </h4>
+      <h4> You will be able to speak English in many different situations. This site will give you</h4>
+      <h4>the foundation you need to communicate effectively in English.</h4>
+      <a href="#Projects" class="main-btn"> Get Start </a>
+    <div class="social-icons" >
+      <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </div>
+  </section>
+
+
+
+  <!-- Section about -->
+
+  <section class="cards" id="about">
+    <h2 class="title">Discover the best way to learn English</h2>
+    <div class="content">
+
+      <!-- The first Card -->
+
+<div class="card">
+  <div class="icon">
+    <i class="fa-solid fa-spell-check"></i>
+  </div>
+
+  <div class="info">
+    <h3>Complete English</h3>
+    <p> Learn how to speak English quickly with our Complete English online course. Whether you’re learning as a beginner or at a more advanced level, our course – covering everything from English pronunciation and grammar to English expressions – will help you move past the basics and become fluent in English</p>
+  </div>
+</div>
+
+<!-- The Secound Card -->
+
+<div class="card">
+  <div class="icon">
+    <i class="fa-solid fa-user-tie"></i>
+  </div>
+
+  <div class="info">
+    <h3>English for Business</h3>
+    <p>Learning English online for your career? Our English for Business course has got you covered. Improve your business English by learning the phrases and etiquette you’ll need in an English-speaking environment – whether it’s business English vocabulary for interviews, emails, or sweet-talking customers. </p>
+  </div>
+</div> 
+
+<!-- The Third Card -->
+
+<div class="card">
+  <div class="icon">
+    <i class="fa-solid fa-jet-fighter"></i>
+  </div>
+  <div class="info">
+    <h3>English for Travel</h3>
+    <p>If you’ve booked a trip to an English-speaking country, you might like our English for Travel course. Prepare to live your best life on your adventures abroad by learning basic English holiday phrases and vocabulary. Think everything from asking for directions to making a reservation.</p>
+  </div>
+</div>
+    </div>
+  </section>
+
+  <!-- The Section Projects -->
+
+  <!-- The First Card-->
+
+  <section class="projects" id="Projects">
+    <h2 class="title">Six Incredibly Easy Method that will improve your English </h2>
+    <div class="content">
+      <div class="project-card">
+      <div class="project-image">
+       <img src="vocab.png" />
+      </div>
+
+      <div class="project-info">
+        <p class="project-category">Vocabulary simply means words, and English vocabulary means lots and lots of words.
+
+          Just think of English vocabulary as the bricks of the language, and to help you build up your vocabulary we have organised these pages using a thematic approach and used lots and lots of pictures and sounds to go with the words.</p>
+        <strong class="project-title">
+          <span >Vocabulary </span>
+          <a href="#" class="more-details">more details</a>
+        </strong>
+      </div>
+      </div>
+
+      <!--The Secound Card -->
+
+      <div class="project-card">
+        <div class="project-image">
+         <img src="gram.png" />
+        </div>
+  
+        <div class="project-info">
+          <p class="project-category">If you just started learning English, you first need to know some basic rules of the language. Developing a solid foundation in English grammar will not only help you create your own sentences correctly but will also make it easier to improve your communication skills in both spoken and written English.</p>
+          <strong class="project-title">
+            <span >Grammar  </span>
+            <a href="#" class="more-details">more details</a>
+          </strong>
+        </div>
+        </div>
+
+        <!--The Third Card -->
+
+
+        <div class="project-card">
+          <div class="project-image">
+           <img src="reading.png" />
+          </div>
+    
+          <div class="project-info">
+            <p class="project-category">If you want to learn English more quickly, lots of reading is important. The more you read, the more input your brain gets about how the language works. When you read in English, you can improve your vocabulary, your grammar, and your writing skills at the same time.<br><br></p>
+            <strong class="project-title">
+        
+              <span > reading </span>
+              <a href="#" class="more-details">more details</a>
+            </strong>
+          </div>
+          </div>
+
+          <!--The Four Card -->
+          <div class="project-card">
+            <div class="project-image">
+             <img src="listening.png" />
+            </div>
+      
+            <div class="project-info">
+              <p class="project-category">Lots of English listening practice will help you build confidence, improve your listening comprehension, and train your brain for faster, more natural language </p>
+              <strong class="project-title">
+                <span > Listening  </span>
+                <a href="#" class="more-details">more details</a>
+              </strong>
+            </div>
+            </div>
+
+            <!-- Five -->
+            <div class="project-card">
+              <div class="project-image">
+               <img src="writing.png" />
+              </div>
+        
+              <div class="project-info">
+                <p class="project-category">Practise and improve your writing skills for your school studies and your English exams. There are activities for different levels, so find your level and make a start.</p>
+                <strong class="project-title">
+                  <span >Writing </span>
+                  <a href="#" class="more-details">more details</a>
+                </strong>
+              </div>
+              </div>
+
+              <!-- Six -->
+
+
+              <div class="project-card">
+                <div class="project-image">
+                 <img src="speaking.png" />
+                </div>
+          
+                <div class="project-info">
+                  <p class="project-category">Learn and improve your English conversation skills by practicing your English speaking using our interactive conversation practice tools.</p>
+                  <strong class="project-title">
+                    <span > speaking  </span>
+                    <a href="#" class="more-details">more details</a>
+                  </strong>
+                </div>
+                </div>
+
+    </div>
+    
+  </section>
+
+
+  <!-- Section Contact -->
+
+
+  <section class="cards contact" id="contact">
+    <!--first card -->
+    <div class="content">
+      <div class="card">
+        <div class="icon">
+          <i class="fa-brands fa-whatsapp-square"></i>
+        </div>
+        <div class="info">
+          <h3>Phone</h3>
+          <p> +7708223019960 </p>
+        </div>
+      </div>
+
+<!-- second card -->
+      <div class="card">
+        <div class="icon">
+           <i class="fa-solid fa-envelope-circle-check"></i>  
+        </div>
+        <div class="info">
+          <h3>Email</h3>
+          <p>or E-learning@gmail.com </p>
+        </div>
+      </div> </div>
+  </section>
+
+
+  <!-- The Footer -->
+  <footer class="footer">
+    <p class="footer-title">Copyright@<span >E-Learn</span></p>
+    <div class="social-icons">
+      <a href="#" ><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#" ><i class="fa-brands fa-twitter-square"></i></a>           <!-- from font awesome -->
+      <a href="#" ><i class="fa-brands fa-facebook-square"></i></a>
+      <a href="#" ><i class="fa-brands fa-instagram-square"></i></a>
+    </div>
+  </footer>
+  
+</body>
+</html>
